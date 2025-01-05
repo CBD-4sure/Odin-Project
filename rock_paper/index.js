@@ -21,7 +21,13 @@ function getComputerChoice(){
 
 function getHumanChoice(){
     let choice = prompt("Whats your choice?");
-    choice = choice.toLowerCase();
+    if (choice == null){
+        throw new Error("Exiting the program.");
+    }
+    else{
+        choice = choice.toLowerCase();
+    }
+  
     let a = ["rock","paper","scissors"];
     if (a.includes(choice)){
         console.log("Your choice:", choice);
@@ -84,13 +90,21 @@ function playGame(){
 
     while (k > 0){
         console.log("Round",6-k);
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection);
+        try{
+            const humanSelection = getHumanChoice();
+            const computerSelection = getComputerChoice();
+            playRound(humanSelection, computerSelection);
+        }
+        catch(e){
+            console.error(e);
+        }
         k --;
     }
     if (humanScore > computerScore){
         console.log("You Win!!");
+    }
+    else if (humanScore == computerScore){
+        console.log("Draw");
     }
     else{
         console.log("Computer Wins!!");

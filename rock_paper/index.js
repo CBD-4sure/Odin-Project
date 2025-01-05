@@ -20,6 +20,7 @@ function getComputerChoice(){
 }
 
 function getHumanChoice(){
+    
     let choice = prompt("Whats your choice?");
     if (choice == null){
         throw new Error("Exiting the program.");
@@ -112,4 +113,5 @@ function playGame(){
 
 }
 
+alert("Rock Paper => GO TO CONSOLE TO PLAY");
 playGame();

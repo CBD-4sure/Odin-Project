@@ -113,5 +113,5 @@ function playGame(){
 
 }
 
-alert("Rock Paper => GO TO CONSOLE TO PLAY");
+alert("Rock Paper => GO TO CONSOLE TO PLAY (Press cmd/ctrl + option/shift + J");
 playGame();

@@ -4,14 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper</title>
-    <style> 
-    body{
-        background-color: rgb(53, 54, 54);
-    }</style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
     <h1>Rock Paper Scissors</h1>
-    <h3>Please play in console</h3>
+    
+    <div id="container">
+        <div class="item">
+            <h3 id="yscore">Your Score: 0</h3>
+            <div id="you_div"><h2 id="you">Ready</h2></div>
+        </div>
+        <div class="item">
+            <div style="border: none;"><h3 id="round">Score 5 to win!</h3></div>
+            <div style="border: none;"><h2 id="res">PLAY</h2></div>
+        </div>
+        <div class="item">
+            <h3 id="cscore">Computer Score: 0</h3>
+            <div id="comp_div"><h2 id="comp">Ready</h2></div>
+        </div>
+    </div>
+    <div id="div_b">
+        <button id="r">Rock</button>
+        <button id="p">Paper</button>
+        <button id="s">Scissors</button>
+    </div>
 </body>
 </html>
